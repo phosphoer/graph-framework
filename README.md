@@ -1,6 +1,8 @@
 Math 300 Framework
 ===
 
+This is a small curve drawing framework that is intended to be a testbed for implementing bezier curve functions or similar. It takes care of letting users place points with the mouse, and drawing the resultant sequences of points, so that a student may just focus on implementing a single function that transforms a list of control points into a list of points on a curve. 
+
 Getting Started
 ---
 To see what you have so far, just open `framework.html` in any HTMl5 compliant browser, such as Chrome, Safari, or Firefox. While writing code, you can refresh to page to see changes. Use the developer console of whatever browser you are using to see javascript errors and debug.
