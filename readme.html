@@ -1,0 +1,219 @@
+
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+
+body{
+  color:#444;
+  font-family:Georgia, Palatino, 'Palatino Linotype', Times,
+              'Times New Roman', serif,
+              "Hiragino Sans GB", "STXihei", "微软雅黑";
+  font-size:12px;
+  line-height:1.5em;
+  background:#fefefe;
+  width: 45em;
+  margin: 10px auto;
+  padding: 1em;
+  outline: 1300px solid #FAFAFA;
+}
+
+a{ color: #0645ad; text-decoration:none;}
+a:visited{ color: #0b0080; }
+a:hover{ color: #06e; }
+a:active{ color:#faa700; }
+a:focus{ outline: thin dotted; }
+a:hover, a:active{ outline: 0; }
+
+span.backtick {
+  border:1px solid #EAEAEA;
+  border-radius:3px;
+  background:#F8F8F8;
+  padding:0 3px 0 3px;
+}
+
+::-moz-selection{background:rgba(255,255,0,0.3);color:#000}
+::selection{background:rgba(255,255,0,0.3);color:#000}
+
+a::-moz-selection{background:rgba(255,255,0,0.3);color:#0645ad}
+a::selection{background:rgba(255,255,0,0.3);color:#0645ad}
+
+p{
+margin:1em 0;
+}
+
+img{
+max-width:100%;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-weight:normal;
+color:#111;
+line-height:1em;
+}
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2.5em; }
+h2{ font-size:2em; border-bottom:1px solid silver; padding-bottom: 5px; }
+h3{ font-size:1.5em; }
+h4{ font-size:1.2em; }
+h5{ font-size:1em; }
+h6{ font-size:0.9em; }
+
+blockquote{
+color:#666666;
+margin:0;
+padding-left: 3em;
+border-left: 0.5em #EEE solid;
+}
+hr { display: block; height: 2px; border: 0; border-top: 1px solid #aaa;border-bottom: 1px solid #eee; margin: 1em 0; padding: 0; }
+
+
+pre , code, kbd, samp {
+  color: #000;
+  font-family: monospace;
+  font-size: 0.88em;
+  border-radius:3px;
+  background-color: #F8F8F8;
+  border: 1px solid #CCC;
+}
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 5px;}
+pre code { border: 0px !important; }
+code { padding: 0 3px 0 3px; }
+
+b, strong { font-weight: bold; }
+
+dfn { font-style: italic; }
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+ul, ol { margin: 1em 0; padding: 0 0 0 2em; }
+li p:last-child { margin:0 }
+dd { margin: 0 0 0 2em; }
+
+img { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+@media only screen and (min-width: 480px) {
+body{font-size:14px;}
+}
+
+@media only screen and (min-width: 768px) {
+body{font-size:16px;}
+}
+
+@media print {
+  * { background: transparent !important; color: black !important; filter:none !important; -ms-filter: none !important; }
+  body{font-size:12pt; max-width:100%;}
+  a, a:visited { text-decoration: underline; }
+  hr { height: 1px; border:0; border-bottom:1px solid black; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  abbr[title]:after { content: " (" attr(title) ")"; }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+  pre, blockquote { border: 1px solid #999; padding-right: 1em; page-break-inside: avoid; }
+  tr, img { page-break-inside: avoid; }
+  img { max-width: 100% !important; }
+  @page :left { margin: 15mm 20mm 15mm 10mm; }
+  @page :right { margin: 15mm 10mm 15mm 20mm; }
+  p, h2, h3 { orphans: 3; widows: 3; }
+  h2, h3 { page-break-after: avoid; }
+}</style></head><body><h1 id="math-300-framework">Math 300 Framework</h1>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>To see what you have so far, just open <code>framework.html</code> in any HTMl5 compliant browser, such as Chrome, Safari, or Firefox. While writing code, you can refresh to page to see changes. Use the developer console of whatever browser you are using to see javascript errors and debug.</p>
+
+<h2 id="adding-files">Adding files</h2>
+
+<p>To add a file to the project, just create <code>yourfile.js</code> in the js folder, and include it in <code>framework.html</code> like this: </p>
+
+<pre><code>&lt;!-- Include your files here --&gt;
+&lt;script type="text/javascript" src="js/yourfile.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="creating-a-curve-function">Creating a curve function</h2>
+
+<p>All curve functions should be defined in this manner:</p>
+
+<pre><code>function CurveFunctionName(controlPoints, curvePoints)
+</code></pre>
+
+<p><code>controlPoints</code> is an <code>Array</code> of objects that have <code>x</code> and <code>y</code> properties. So you can access each control point's x position like this: <code>controlPoints[0].x</code>. The control points are the points that the user places on the screen.</p>
+
+<p><code>curvePoints</code> is an <code>Array</code> of objects in the same format. It is an output parameter which you must fill with the points defining the curve. The resolution of the curve depends on how many points you fill this array with. The points in this array will be connected with lines by the framework automatically. You could add a point to this array like this: </p>
+
+<pre><code>curvePoints.push({x: 10, y:10});
+</code></pre>
+
+<h2 id="adding-your-curve-function-to-the-list">Adding your curve function to the list</h2>
+
+<p>In order to see your curve function show up in the drop down list, you must add it yourself. To do this, edit <code>main.js</code> and add the following:</p>
+
+<pre><code>JSGraph.AddCurveFunction("Curve Function Name", CurveFunctionName, minimumIterations, maximumIterations, showShells);
+</code></pre>
+
+<p>The first parameter is the string name to show in the drop down list. The second parameter is the function you want to be called in order to calculate that curve. <code>minimumIterations</code> and <code>maximumIterations</code> define the range of the iteration slider. It's up to you to figure out a good range for the curve you are using. It will take some experimentation. By default the graph will use the mean value of min and max. <code>showShells</code> defines whether or not the shells should be drawn for this curve. Some of the curve functions don't have shells, so this should be set to false in those cases. It is true by default.</p>
+
+<h2 id="shells-and-knots">Shells and Knots</h2>
+
+<p>The <code>JSGraph</code> has two other custom functions that can be defined, using <code>JSGraph.SetShellFunction(func)</code> and <code>JSGraph.SetKnotFunction(func)</code> respectively. Each takes as a parameter the function object to call when each item needs to be recalculated. The shell function takes these parameters:</p>
+
+<pre><code>function Shells(controlPoints, shellPoints, t)
+</code></pre>
+
+<p>Where <code>controlPoints</code> is the same <code>Array</code> as with the curve functions, and <code>shellPoints</code> is the same as <code>curvePoints</code> but is used for drawing the shells. <code>t</code> is the current value of the T slider in the UI. The knot function looks like this:</p>
+
+<pre><code>function Knots(controlPoints, knotValues)
+</code></pre>
+
+<p>Where <code>controlPoints</code> is the same <code>Array</code> as before, and <code>knotValues</code> is an <code>Array</code> of values representing the knot sequence. <code>knotValues</code> is an output parameter.</p>
+
+<h1 id="math">Math</h1>
+
+<p>The framework comes with a few linear algebra functions that you may find useful.</p>
+
+<h2 id="row-add">Row Add</h2>
+
+<pre><code>function RowAdd(matrix, toRow, fromRow, fromRowScale)
+</code></pre>
+
+<p><code>matrix</code> - A 2d array of values</p>
+
+<p><code>toRow</code> - The 0-based index of the row to add to</p>
+
+<p><code>fromRow</code> - The 0-based index of hte row to add from</p>
+
+<p><code>fromRowScale</code> - The scale to apply to <code>fromRow</code> before adding (does not affect <code>fromRow</code>)</p>
+
+<h2 id="row-multiply">Row Multiply</h2>
+
+<pre><code>function RowMultiply(matrix, row, scalar)
+</code></pre>
+
+<p><code>matrix</code> - A 2d array of values</p>
+
+<p><code>row</code> - The 0-based index of the row to scale</p>
+
+<p><code>scalar</code> - The scalar to apply to the given row</p>
+
+<h2 id="row-reduce">Row Reduce</h2>
+
+<pre><code>function RowReduce(matrix)
+</code></pre>
+
+<p><code>matrix</code> - A 2d array of values</p>
+
+<p>Rref's the given matrix in place.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Many things about the framework can be configured via <code>config.js</code>, including colors and line widths. It also allows you to enable the iteration slider, which is disabled by default. </p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>That's it! If you have further questions about using the framework (not about the assignment!), email me at <code>david0evans@gmail.com</code>.</p>
+</body>
