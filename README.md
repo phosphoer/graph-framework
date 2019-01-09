@@ -5,7 +5,7 @@ This is a small curve drawing framework that is intended to be a testbed for imp
 
 Getting Started
 ---
-To see what you have so far, just open `framework.html` in any HTMl5 compliant browser, such as Chrome, Safari, or Firefox. While writing code, you can refresh to page to see changes. Use the developer console of whatever browser you are using to see javascript errors and debug.
+Download or clone the repository somewhere on your computer. To see what you have so far, just open `framework.html` in any HTMl5 compliant browser, such as Chrome, Safari, or Firefox. While writing code, you can refresh to page to see changes. Use the developer console of whatever browser you are using to see javascript errors and debug.
 
 Adding files
 ---
